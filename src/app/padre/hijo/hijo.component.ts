@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hijo',
@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './hijo.component.css'
 })
 export class HijoComponent {
-
+  // !: Operador non-null assertion
+  // confie en que esta propiedad va ser inicializada posteriormente
+  @Input() mensaje!: string;
 }
