@@ -1,3 +1,4 @@
+import { MensajeService } from './mensaje.service';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NuevoComponenteComponent } from "./nuevo-componente/nuevo-componente.component";
@@ -20,5 +21,11 @@ import { ViewChildComponent } from "./view-child/view-child.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  titulo = 'Decorador @ViewChild en Angular';
+  titulo = 'Servicios en Angular';
+
+  mensaje: string;
+
+  constructor(mensajeService: MensajeService){
+      this.mensaje = mensajeService.obtenerMensaje();
+  }
 }
