@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hijo',
@@ -8,7 +8,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './hijo.component.css'
 })
 export class HijoComponent {
-  // !: Operador non-null assertion
-  // confie en que esta propiedad va ser inicializada posteriormente
-  @Input() mensaje!: string;
+
+    mensaje:string = 'Mensaje desde el componente Hijo'
+
+    cambiarMensaje(nuevoMensaje:string){
+      this.mensaje = nuevoMensaje;
+    }
+
 }

@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
-import { HijoComponent } from "./hijo/hijo.component";
+import { Component, ViewChild } from '@angular/core';
+import { HijoComponent } from './hijo/hijo.component';
 
 @Component({
   selector: 'app-padre',
   standalone: true,
   imports: [HijoComponent],
   templateUrl: './padre.component.html',
-  styleUrl: './padre.component.css'
+  styleUrl: './padre.component.css',
 })
 export class PadreComponent {
-  mensajePadre: string = "Mensaje desde el componente Padre";
+
+  @ViewChild(HijoComponent) componenteHijo!: HijoComponent;
+
+  cambiarMensajeHijo() {
+    this.componenteHijo.cambiarMensaje("Mensaje actualizado desde el componente Padre");
+  }
 }
