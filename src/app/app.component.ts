@@ -12,16 +12,17 @@ import { ComponenteIfComponent } from "./componente-if/componente-if.component";
 import { AgregarTareaComponent } from "./agregar-tarea/agregar-tarea.component";
 import { ComponenteForComponent } from "./componente-for/componente-for.component";
 import { ViewChildComponent } from "./view-child/view-child.component";
+import { ListadoUsuariosComponent } from "./listado-usuarios/listado-usuarios.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NuevoComponenteComponent, ComponenteEnLineaComponent, InterpolacionComponent, PadreComponent, MostrarMensajeComponent, ReplicadorComponent, SaludarComponent, ComponenteIfComponent, AgregarTareaComponent, ComponenteForComponent, ViewChildComponent],
+  imports: [RouterOutlet, NuevoComponenteComponent, ComponenteEnLineaComponent, InterpolacionComponent, PadreComponent, MostrarMensajeComponent, ReplicadorComponent, SaludarComponent, ComponenteIfComponent, AgregarTareaComponent, ComponenteForComponent, ViewChildComponent, ListadoUsuariosComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  titulo = 'Servicios en Angular';
+  titulo = 'Servicios y Observables en Angular';
 
   mensaje: string;
 
